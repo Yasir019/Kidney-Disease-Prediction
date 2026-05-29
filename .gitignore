@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+.env.local
+npm-debug.log*
+ui-check*.png
+chrome-profile*/
+chrome.log
