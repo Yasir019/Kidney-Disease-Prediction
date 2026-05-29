@@ -34,7 +34,8 @@ button {
 }
 
 .app-shell {
-  width: min(1440px, calc(100% - 32px));
+  width: calc(100% - 32px);
+  max-width: 1440px;
   margin: 0 auto;
   padding: 28px 0 40px;
 }
@@ -45,6 +46,10 @@ button {
   gap: 28px;
   align-items: end;
   padding: 30px 0 24px;
+}
+
+.hero > * {
+  min-width: 0;
 }
 
 .eyebrow {
@@ -75,6 +80,7 @@ button {
   color: #5d6b66;
   font-size: 1.04rem;
   line-height: 1.65;
+  overflow-wrap: anywhere;
 }
 
 .hero-actions {
@@ -350,7 +356,7 @@ select:focus {
 
 @media (max-width: 760px) {
   .app-shell {
-    width: min(100% - 20px, 1440px);
+    width: calc(100% - 20px);
     padding-top: 14px;
   }
 
@@ -362,15 +368,27 @@ select:focus {
 
   .hero-actions {
     justify-content: stretch;
+    flex-direction: column;
   }
 
   .primary-button,
   .ghost-button {
-    flex: 1 1 180px;
+    width: 100%;
+    flex: 0 0 auto;
   }
 
   .form-grid,
   .fields {
     grid-template-columns: 1fr;
+  }
+
+  .field-label {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .field-label small {
+    text-align: left;
   }
 }
