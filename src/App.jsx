@@ -10,7 +10,6 @@ import {
   TestTube2,
 } from "lucide-react";
 import { initialPatient, predictKidneyRisk } from "./predictionEngine";
-
 const sections = [
   {
     title: "Patient Vitals",
